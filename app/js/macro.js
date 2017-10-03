@@ -84,20 +84,15 @@ function getLossSpeed() {
 function calculateAll() {
     getWeight();
     getBodyfat();
-    // getActivityLevel();
-    // getLossSpeed();
-
     let leanMass =  Math.round(weight * LBMfat);
-        console.log('lean mass is : ' + leanMass);
+        // console.log('lean mass is : ' + leanMass);
     let BMR = Math.round((leanMass * 9.8) + 370);
-        console.log('BMR is : ' + BMR);
-
-
+        // console.log('BMR is : ' + BMR);
     let TDEE = Math.round(BMR * getActivityLevel());
         console.log('TDEE is : ' + TDEE);
 
     let deficit = Math.round(TDEE * getLossSpeed());
-        console.log('deficit is : ' + deficit);
+        // console.log('deficit is : ' + deficit);
 
 
 
