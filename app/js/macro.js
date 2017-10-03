@@ -58,7 +58,7 @@ function getLossSpeed() {
         for (i=0; i < speedRadio.length; i++) {
             if (speedRadio[i].checked){
                 speed_input = speedRadio[i].value;
-                console.log(speedRadio[i].value + 'speedRadio value is');
+                // console.log(speedRadio[i].value + 'speedRadio value is');
                 // speedCarb = speedRadio[i].value;
             }
         }
@@ -77,7 +77,7 @@ function calculateAll() {
     var BMR = Math.round((leanMass * 9.8) + 370);
     var TDEE = Math.round(BMR * getActivityLevel());
     var deficit = Math.round(TDEE * getLossSpeed());
-    console.log(loss_speed + 'loss speed is');
+    // console.log(loss_speed + 'loss speed is');
     var proteinCalc = Math.round(leanMass * 0.95);
     var fatCalc = Math.round( (deficit - 100 - (4 * proteinCalc)) / 9);
     document.getElementById('LBMdisplay').innerHTML = "Lean Body Mass: " + leanMass + ' lbs';

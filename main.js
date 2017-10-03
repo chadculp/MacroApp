@@ -20,7 +20,7 @@ let addWindow;
 // Listen for app to be ready
 app.on('ready', function(){
   // Create new window
-  mainWindow = new BrowserWindow({width: 500, height: 500});
+  mainWindow = new BrowserWindow({width: 475, height: 600});
   // Load html in window
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
@@ -38,28 +38,6 @@ app.on('ready', function(){
   Menu.setApplicationMenu(mainMenu);
 });
 
-
-
-
-
-
-// Handle add item window
-// function createAddWindow(){
-//   addWindow = new BrowserWindow({
-//     width: 300,
-//     height:200,
-//     title:'Add Shopping List Item'
-//   });
-//   addWindow.loadURL(url.format({
-//     pathname: path.join(__dirname, 'addWindow.html'),
-//     protocol: 'file:',
-//     slashes:true
-//   }));
-//   // Handle garbage collection
-//   addWindow.on('close', function(){
-//     addWindow = null;
-//   });
-// }
 
 
 
