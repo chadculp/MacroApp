@@ -1,8 +1,5 @@
 
 
-var activeMulti;
-var lossMulti;
-
 
 //Set up an associative array 
 //Key represents the activity level of the user
@@ -48,29 +45,21 @@ function getBodyfat() {
 function getActivityLevel() {
     // console.log('get active level called');
     var activeRadio = document.getElementsByName('activelevel');
-    // console.log('get active level called & activeRadio is ' + activeRadio);
         for (i=0; i < activeRadio.length; i++) {
-            // console.log('active position is: ' + i);
+            console.log('active position is: ' + i);
             if (activeRadio[i].checked){
                 activity_input = activeRadio[i].value;
+                console.log(activity_input + ' is activity input');
             }
         }
-        // console.log('activity level is: ');
-        activeMulti = activity_level[activity_input];
-        console.log('active multi is ' + activeMulti);
-        return activity_level[activity_input];
-        
+        console.log('AL IS : ' + activity_level[activity_input]);
+        return activity_level[activity_input];        
 } 
 
 
 
 
 
-
-
-
-
-///////////////////////////////////
 
 
 
@@ -95,17 +84,24 @@ function getLossSpeed() {
 function calculateAll() {
     getWeight();
     getBodyfat();
-    getActivityLevel();
-    getLossSpeed();
+    // getActivityLevel();
+    // getLossSpeed();
+
     let leanMass =  Math.round(weight * LBMfat);
         console.log('lean mass is : ' + leanMass);
     let BMR = Math.round((leanMass * 9.8) + 370);
         console.log('BMR is : ' + BMR);
+
+
     let TDEE = Math.round(BMR * getActivityLevel());
-        console.log('TDEE mass is : ' + TDEE);
+        console.log('TDEE is : ' + TDEE);
+
     let deficit = Math.round(TDEE * getLossSpeed());
         console.log('deficit is : ' + deficit);
-    // console.log(loss_speed + 'loss speed is');
+
+
+
+
     var proteinCalc = Math.round(leanMass * 0.95);
     var fatCalc = Math.round( (deficit - 100 - (4 * proteinCalc)) / 9);
     document.getElementById('LBMdisplay').innerHTML = "Lean Body Mass: " + leanMass + ' lbs';
