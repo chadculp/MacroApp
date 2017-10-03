@@ -40,8 +40,10 @@ function getBodyfat() {
 // getActivityLevel() determines additional caloric intake multiplier needed based on user activity level
 // We need to take user's the selection from radio button selection for activity level
 function getActivityLevel() {
-    var activeRadio = document.getElementsByName('activelevel');
+    console.log('get active level called');
+    var activeRadio = document.getElementsByClassName('activelevel');
         for (i=0; i < activeRadio.length; i++) {
+            // console.log('get active level called');
             if (activeRadio[i].checked){
                 activity_input = activeRadio[i].value;
             }
