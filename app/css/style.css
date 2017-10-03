@@ -43,8 +43,8 @@ body {
 }
 
 .digits{
-	color: white;
-	font-weight: lighter;
+	color: lavender;
+	/*font-weight: lighter;*/
 	font-size: 1.2em;
 }
 
@@ -103,7 +103,7 @@ body {
 .radioLabel{
 	padding-top: 20px;
 	color: lavender;
-	font-weight: lighter;
+	/*font-weight: lighter;*/
 	margin: auto;
 	width: auto;
 	font-size: 1.25em;
