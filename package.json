@@ -1,0 +1,14 @@
+{
+  "name": "macroapp",
+  "version": "1.0.0",
+  "description": "desktop keto macros caluclator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Chad Culp",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^1.7.8"
+  }
+}

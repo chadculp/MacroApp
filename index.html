@@ -1,0 +1,65 @@
+<DOCTYPE html>
+
+<html>
+
+
+<head>
+	<title>Keto Macros Desktop App</title>
+</head>
+
+
+<body>
+		<section id="calculator">
+		<div class="c-content-box c-size-md c-no-padding c-bg-dark-2">
+			<div class="c-content-feature-4">
+				<div class="col-sm-12 clearfix" id="chartContainer"></div>
+				<!-- <div class="c-bg-parallax c-feature-bg c-content-left c-diagonal c-border-right-dark-2" style="background-image: url(assets/base/img/content/KMcalc.jpg)"></div> -->
+				<div class="c-content-area"></div>
+				<div class="container">
+					<div class="c-feature-content c-right">
+						<div class="c-content-v-center">
+							<div class="c-wrapper wow fadeInDown">
+								<div class="c-body c-animate">
+									<div class="c-content-title-1 animated wow fadeInDown" data-wow-delay="0.2s">
+										<h3 class="c-font-uppercase c-font-bold c-font-white">KETO MACROS CALCULATOR</h3>
+										<div class="c-line-right"></div>
+									</div>
+									<div class="float">
+										<label class="radioLabel" for="weight"><i class="fa fa-universal-access"></i> Weight</label> <input autocomplete="off" id="weight" name="weight" type="number">
+									</div>
+									<div class="float">
+										<label class="radioLabel" data-target="#bfModal" data-toggle="modal" for="bodyfat"><i class="fa fa-thermometer-3"></i> Body Fat %</label> <input autocomplete="off" id="bodyfat" name="bodyfat" type="number">
+									</div>
+									<div class="float">
+										<label class="radioLabel" for="activelevel"><i class="fa fa"></i> Activity Level</label> <input name="activelevel" type="radio" value="Sedentary"> Sedentary <input name="activelevel" type="radio" value="Moderate"> Lightly <input name="activelevel" type="radio" value="Highly"> Highly
+									</div>
+									<div class="float">
+										<label class="radioLabel" for="goalspeed">Goal</label> <input name="lossrate" type="radio" value="Maintain"> Maintain <input name="lossrate" type="radio" value="Slow"> Slow <input name="lossrate" type="radio" value="Medium"> Medium <input name="lossrate" type="radio" value="Fast"> Rapid
+									</div><br>
+									<div class="c-content animated wow fadeInDown" data-wow-delay="0.7s">
+
+										<a data-target="#bfModal" data-toggle="modal">This</a> graphic will help you estimate.</p>
+										<button class="btn btn-lg c-btn-green c-btn-border-2x c-btn-square c-btn-bold wow animated fadeIn" data-wow-delay="1s" id='submit' onclick="calculateAll()" type='submit'>Get Your Macros</button> 
+										<button class="btn btn-lg c-btn-green c-btn-border-2x c-btn-square c-btn-bold wow animated fadeIn" data-wow-delay="1s" id='clearItems' onclick="window.location.reload()" >Clear</button> 
+									</div>
+									<div id="calculatedArea">
+										<div class="calculatedNums mHidden mRows" id="LBMdisplay"></div>
+										<div class="calculatedNums mHidden mRows" id="TDEEdisplay"></div>
+										<div class="calculatedNums mHidden mRows" id="DEFdisplay"></div>
+										<div class="calculatedNums mHidden mRows" id="PMacdisplay"></div>
+										<div class="calculatedNums mHidden mRows" id="FMacdisplay"></div>
+										<div class="calculatedNums mHidden mRows" id="CMacdisplay"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<script src="app/js/macro.js"></script>
+</body>
+
+
+</html>
