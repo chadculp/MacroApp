@@ -41,7 +41,8 @@ body {
 }
 
 .digits{
-	/*color: white;*/
+	color: white;
+	font-weight: lighter;
 	font-size: 1.2em;
 }
 
@@ -49,6 +50,11 @@ body {
 #weight, #bodyfat{
 	text-align: center;
 	font-size: 1.1em;
+}
+
+.radioRow p{
+	display: inline-block;
+	width: 80px;
 }
 
 
