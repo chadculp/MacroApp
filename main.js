@@ -84,20 +84,20 @@ app.on('window-all-closed', function () {
 
 
 // Add developer tools option if in dev
-if(process.env.NODE_ENV !== 'production'){
-  mainMenuTemplate.push({
-    label: 'Developer Tools',
-    submenu:[
-      {
-        role: 'reload'
-      },
-      {
-        label: 'Toggle DevTools',
-        accelerator:process.platform == 'darwin' ? 'Command+I' : 'Ctrl+I',
-        click(item, focusedWindow){
-          focusedWindow.toggleDevTools();
-        }
-      }
-    ]
-  });
-}
+// if(process.env.NODE_ENV !== 'production'){
+//   mainMenuTemplate.push({
+//     label: 'Developer Tools',
+//     submenu:[
+//       {
+//         role: 'reload'
+//       },
+//       {
+//         label: 'Toggle DevTools',
+//         accelerator:process.platform == 'darwin' ? 'Command+I' : 'Ctrl+I',
+//         click(item, focusedWindow){
+//           focusedWindow.toggleDevTools();
+//         }
+//       }
+//     ]
+//   });
+// }

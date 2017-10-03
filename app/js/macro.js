@@ -43,7 +43,6 @@ function getBodyfat() {
 function getActivityLevel() {
     var activeRadio = document.getElementsByName('activelevel');
         for (i=0; i < activeRadio.length; i++) {
-            console.log('active position is: ' + i);
             if (activeRadio[i].checked){
                 activity_input = activeRadio[i].value;
             }
@@ -60,7 +59,6 @@ function getActivityLevel() {
 // We need to take user's the selection from radio button selection for speed desired
 function getLossSpeed() {
     var speedRadio = document.getElementsByName('lossrate');
-    // console.log('speedRadio is ' + speedRadio);
         for (i=0; i < speedRadio.length; i++) {
             if (speedRadio[i].checked){
                 speed_input = speedRadio[i].value;
