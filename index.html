@@ -7,32 +7,89 @@
 </head>
 <body>
 	<div class="container">
-		<div class="calculator">
+		<div class="calculator form">
 			<div class="header">
 				<h3>KETO MACROS CALCULATOR</h3>
 			</div>
 			<div class="inputRow">
-				<label class="" for="weight"><i class=""></i>Your Weight: </label> <input autocomplete="off" id="weight" name="weight" type="number" class="">
+				<label class="" for="weight"><i class=""></i>Your Weight:</label> <input autocomplete="off" class="" id="weight" name="weight" type="number">
 			</div>
 			<div class="inputRow">
-				<label class="" data-target="#bfModal" data-toggle="modal" for="bodyfat"><i class="fa fa-thermometer-3"></i> Body Fat % :</label> <input autocomplete="off" id="bodyfat" name="bodyfat" type="number">
+				<label class="" data-toggle="modal" for="bodyfat"><i class="fa fa-thermometer-3"></i> Body Fat % :</label> <input autocomplete="off" id="bodyfat" name="bodyfat" type="number">
 			</div>
+
+			<!-- Activity Radio -->
+			
 			<div class="inputRow">
-				<label class="radioLabel" for="activelevel"><i class=""></i> Activity Level</label> 
-				
+				<label class="radioLabel" for="activelevel"><i class=""></i> Activity Level</label>
+			    <p>
+			      <input name="activelevel" class="activeLevel" type="radio" id="minimal" value="Sedentary"/>
+			      <label for="minimal">Minimal</label>
+			    </p>
+			    <p>
+			      <input name="activelevel" class="activeLevel" type="radio" id="lightly" value="Moderate"/>
+			      <label for="lightly">Lightly</label>
+			    </p>
+			    <p>
+			      <input name="activelevel" class="activeLevel" type="radio" id="highly" value="Highly"/>
+			      <label for="highly">Highly</label>
+			    </p>
+			</div>
+			<!-- End Activity Radio -->
+
+			<!-- Speed Radio -->
+			
 			<div class="inputRow">
-				<input name="activelevel" type="radio" value="Sedentary"> Sedentary <input name="activelevel" type="radio" value="Moderate"> Lightly <input name="activelevel" type="radio" value="Highly"> Highly
+				<label class="radioLabel" for="goalspeed"><i class=""></i> Loss Goal</label>
+			    <p>
+			      <input name="lossrate" type="radio" id="maintain" value="Maintain"/>
+			      <label for="maintain">Maintain</label>
+			    </p>
+			    <p>
+			      <input name="lossrate" type="radio" id="slow" value="Slow"/>
+			      <label for="slow">Slow</label>
+			    </p>
+			    <p>
+			      <input name="lossrate" type="radio" id="medium" value="Medium"/>
+			      <label for="medium">Medium</label>
+			    </p>
+			    <p>
+			      <input name="lossrate" type="radio" id="rapid" value="Fast"/>
+			      <label for="rapid">Rapid</label>
+			    </p>
+			</div>
+			<!-- End Speed Radio -->
+
+
+
+<!-- 			<div class="inputRow radio">
+				<label class="radioLabel" for="activelevel"><i class=""></i> Activity Level</label>
+				<div class="inputRow">
+					<input name="activelevel" type="radio" value="Sedentary"> Sedentary 
+					<input name="activelevel" type="radio" alue="Moderate"v> Lightly 
+					<input name="activelevel" type="radio" value="Highly"> Highly
 				</div>
-			</div>
-			<div class="inputRow">
-				<label class="radioLabel" for="goalspeed">Loss Goal</label> 
-			<div class="inputRow">
-				<input name="lossrate" type="radio" value="Maintain"> Maintain <input name="lossrate" type="radio" value="Slow"> Slow <input name="lossrate" type="radio" value="Medium"> Medium <input name="lossrate" type="radio" value="Fast"> Rapid
-			</div>
-			</div>
-			<br>
+			</div> -->
+
+
+
+<!-- 
+			<div class="inputRow  radio">
+				<label class="radioLabel" for="goalspeed">Loss Goal</label>
+				<div class="inputRow">
+					<input name="lossrate" type="radio" value="Maintain"> Maintain 
+					<input name="lossrate" type="radio" value="Slow"> Slow 
+					<input name="lossrate" type="radio" value="Medium"> Medium 
+					<input name="lossrate" type="radio" value="Fast"> Rapid
+				</div>
+			</div> -->
+
+
+
+
+
 			<div>
-				<button class="btn inputs" id='submit' onclick="calculateAll()" type='submit'>Get Your Macros</button> <button class="btn inputs" id='clearItems' onclick="window.location.reload()">Clear</button>
+				<button class="btn inputs" id='submit' onclick="calculateAll()" type='submit'>Get Macros</button> <button class="btn inputs" id='clearItems' onclick="window.location.reload()">Clear</button>
 			</div>
 			<div id="calculatedArea">
 				<div class="calculatedNums" id="LBMdisplay"></div>
@@ -45,6 +102,8 @@
 		</div>
 	</div>
 	<script src="app/js/macro.js">
-	</script>
+	</script> 
+<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
+	</script> -->
 </body>
 </html>
