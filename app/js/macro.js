@@ -1,3 +1,4 @@
+
 //Set up an associative array 
 //Key represents the activity level of the user
 //Value is the multiplier of the BMR needed to meet TDEE
@@ -46,8 +47,11 @@ function getActivityLevel() {
                 activity_input = activeRadio[i].value;
             }
         }
-        return activity_level[activity_input];
+        return activity_level[activity_input];        
 } 
+
+
+
 
 
 
@@ -58,8 +62,6 @@ function getLossSpeed() {
         for (i=0; i < speedRadio.length; i++) {
             if (speedRadio[i].checked){
                 speed_input = speedRadio[i].value;
-                // console.log(speedRadio[i].value + 'speedRadio value is');
-                // speedCarb = speedRadio[i].value;
             }
         }
         return loss_speed[speed_input];
@@ -69,15 +71,12 @@ function getLossSpeed() {
 //calculateAll() uses other calculation fuctions to determine macro nutrient needs based on user data input and formulas
 //The output of the data is used to dynamically display totals after calculation is performed
 function calculateAll() {
-	
     getWeight();
     getBodyfat();
-    getActivityLevel();
-    var leanMass =  Math.round(weight * LBMfat);
-    var BMR = Math.round((leanMass * 9.8) + 370);
-    var TDEE = Math.round(BMR * getActivityLevel());
-    var deficit = Math.round(TDEE * getLossSpeed());
-    // console.log(loss_speed + 'loss speed is');
+    let leanMass =  Math.round(weight * LBMfat);
+    let BMR = Math.round((leanMass * 9.8) + 370);
+    let TDEE = Math.round(BMR * getActivityLevel());
+    let deficit = Math.round(TDEE * getLossSpeed());
     var proteinCalc = Math.round(leanMass * 0.95);
     var fatCalc = Math.round( (deficit - 100 - (4 * proteinCalc)) / 9);
     document.getElementById('LBMdisplay').innerHTML = "Lean Body Mass: " + leanMass + ' lbs';

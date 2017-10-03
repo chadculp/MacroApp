@@ -15,12 +15,10 @@ let addWindow;
 
 
 
-
-
 // Listen for app to be ready
 app.on('ready', function(){
   // Create new window
-  mainWindow = new BrowserWindow({width: 475, height: 600});
+  mainWindow = new BrowserWindow({width: 485, height: 680});
   // Load html in window
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
@@ -84,20 +82,20 @@ app.on('window-all-closed', function () {
 
 
 // Add developer tools option if in dev
-if(process.env.NODE_ENV !== 'production'){
-  mainMenuTemplate.push({
-    label: 'Developer Tools',
-    submenu:[
-      {
-        role: 'reload'
-      },
-      {
-        label: 'Toggle DevTools',
-        accelerator:process.platform == 'darwin' ? 'Command+I' : 'Ctrl+I',
-        click(item, focusedWindow){
-          focusedWindow.toggleDevTools();
-        }
-      }
-    ]
-  });
-}
+// if(process.env.NODE_ENV !== 'production'){
+//   mainMenuTemplate.push({
+//     label: 'Developer Tools',
+//     submenu:[
+//       {
+//         role: 'reload'
+//       },
+//       {
+//         label: 'Toggle DevTools',
+//         accelerator:process.platform == 'darwin' ? 'Command+I' : 'Ctrl+I',
+//         click(item, focusedWindow){
+//           focusedWindow.toggleDevTools();
+//         }
+//       }
+//     ]
+//   });
+// }
