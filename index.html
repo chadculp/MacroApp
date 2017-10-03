@@ -12,28 +12,30 @@
 				<h3>KETO MACROS CALCULATOR</h3>
 			</div>
 			<div class="inputRow">
-				<label class="" for="weight"><i class=""></i>Your Weight:</label> <input autocomplete="off" class="" id="weight" name="weight" type="number">
+				<label class="digits" for="weight">Your Weight:</label> <input autocomplete="off" class="" id="weight" name="weight" type="number">
 			</div>
 			<div class="inputRow">
-				<label class="" data-toggle="modal" for="bodyfat"><i class="fa fa-thermometer-3"></i> Body Fat % :</label> <input autocomplete="off" id="bodyfat" name="bodyfat" type="number">
+				<label class="digits" for="bodyfat"> Body Fat % :</label> <input autocomplete="off" id="bodyfat" name="bodyfat" type="number">
 			</div>
 
 			<!-- Activity Radio -->
 			
 			<div class="inputRow">
 				<label class="radioLabel" for="activelevel"><i class=""></i> Activity Level</label>
-			    <p>
-			      <input name="activelevel" class="activeLevel" type="radio" id="minimal" value="Sedentary"/>
-			      <label for="minimal">Minimal</label>
-			    </p>
-			    <p>
-			      <input name="activelevel" class="activeLevel" type="radio" id="lightly" value="Moderate"/>
-			      <label for="lightly">Lightly</label>
-			    </p>
-			    <p>
-			      <input name="activelevel" class="activeLevel" type="radio" id="highly" value="Highly"/>
-			      <label for="highly">Highly</label>
-			    </p>
+				 <div class="inputRow">   
+				    <p>
+				      <input name="activelevel" class="levels" type="radio" id="minimal" value="Sedentary"/>
+				      <label for="minimal">Minimal</label>
+				    </p>
+				    <p>
+				      <input name="activelevel" class="levels" type="radio" id="lightly" value="Moderate"/>
+				      <label for="lightly">Lightly</label>
+				    </p>
+				    <p>
+				      <input name="activelevel" class="levels" type="radio" id="highly" value="Highly"/>
+				      <label for="highly">Highly</label>
+				    </p>
+				</div>
 			</div>
 			<!-- End Activity Radio -->
 
@@ -42,51 +44,23 @@
 			<div class="inputRow">
 				<label class="radioLabel" for="goalspeed"><i class=""></i> Loss Goal</label>
 			    <p>
-			      <input name="lossrate" type="radio" id="maintain" value="Maintain"/>
+			      <input name="lossrate" class="levels" type="radio" id="maintain" value="Maintain"/>
 			      <label for="maintain">Maintain</label>
 			    </p>
 			    <p>
-			      <input name="lossrate" type="radio" id="slow" value="Slow"/>
+			      <input name="lossrate" class="levels" type="radio" id="slow" value="Slow"/>
 			      <label for="slow">Slow</label>
 			    </p>
 			    <p>
-			      <input name="lossrate" type="radio" id="medium" value="Medium"/>
+			      <input name="lossrate" class="levels" type="radio" id="medium" value="Medium"/>
 			      <label for="medium">Medium</label>
 			    </p>
 			    <p>
-			      <input name="lossrate" type="radio" id="rapid" value="Fast"/>
+			      <input name="lossrate" class="levels" type="radio" id="rapid" value="Fast"/>
 			      <label for="rapid">Rapid</label>
 			    </p>
 			</div>
 			<!-- End Speed Radio -->
-
-
-
-<!-- 			<div class="inputRow radio">
-				<label class="radioLabel" for="activelevel"><i class=""></i> Activity Level</label>
-				<div class="inputRow">
-					<input name="activelevel" type="radio" value="Sedentary"> Sedentary 
-					<input name="activelevel" type="radio" alue="Moderate"v> Lightly 
-					<input name="activelevel" type="radio" value="Highly"> Highly
-				</div>
-			</div> -->
-
-
-
-<!-- 
-			<div class="inputRow  radio">
-				<label class="radioLabel" for="goalspeed">Loss Goal</label>
-				<div class="inputRow">
-					<input name="lossrate" type="radio" value="Maintain"> Maintain 
-					<input name="lossrate" type="radio" value="Slow"> Slow 
-					<input name="lossrate" type="radio" value="Medium"> Medium 
-					<input name="lossrate" type="radio" value="Fast"> Rapid
-				</div>
-			</div> -->
-
-
-
-
 
 			<div>
 				<button class="btn inputs" id='submit' onclick="calculateAll()" type='submit'>Get Macros</button> <button class="btn inputs" id='clearItems' onclick="window.location.reload()">Clear</button>

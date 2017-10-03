@@ -1,6 +1,4 @@
 
-
-
 //Set up an associative array 
 //Key represents the activity level of the user
 //Value is the multiplier of the BMR needed to meet TDEE
@@ -43,20 +41,15 @@ function getBodyfat() {
 // getActivityLevel() determines additional caloric intake multiplier needed based on user activity level
 // We need to take user's the selection from radio button selection for activity level
 function getActivityLevel() {
-    // console.log('get active level called');
     var activeRadio = document.getElementsByName('activelevel');
         for (i=0; i < activeRadio.length; i++) {
             console.log('active position is: ' + i);
             if (activeRadio[i].checked){
                 activity_input = activeRadio[i].value;
-                console.log(activity_input + ' is activity input');
             }
         }
-        console.log('AL IS : ' + activity_level[activity_input]);
         return activity_level[activity_input];        
 } 
-
-
 
 
 
@@ -71,8 +64,6 @@ function getLossSpeed() {
         for (i=0; i < speedRadio.length; i++) {
             if (speedRadio[i].checked){
                 speed_input = speedRadio[i].value;
-                // console.log(speedRadio[i].value + 'speedRadio value is');
-                // speedCarb = speedRadio[i].value;
             }
         }
         return loss_speed[speed_input];
@@ -85,18 +76,9 @@ function calculateAll() {
     getWeight();
     getBodyfat();
     let leanMass =  Math.round(weight * LBMfat);
-        // console.log('lean mass is : ' + leanMass);
     let BMR = Math.round((leanMass * 9.8) + 370);
-        // console.log('BMR is : ' + BMR);
     let TDEE = Math.round(BMR * getActivityLevel());
-        console.log('TDEE is : ' + TDEE);
-
     let deficit = Math.round(TDEE * getLossSpeed());
-        // console.log('deficit is : ' + deficit);
-
-
-
-
     var proteinCalc = Math.round(leanMass * 0.95);
     var fatCalc = Math.round( (deficit - 100 - (4 * proteinCalc)) / 9);
     document.getElementById('LBMdisplay').innerHTML = "Lean Body Mass: " + leanMass + ' lbs';
