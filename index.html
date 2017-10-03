@@ -1,62 +1,49 @@
-<DOCTYPE html>
-
+<!DOCTYPE html>
 <html>
-
-
 <head>
 	<title>Keto Macros Calculator App</title>
-	<link rel="stylesheet" href="app/css/style.css">
-	<link rel="stylesheet" href="app/css/bootstrap.css">
+	<link href="app/css/style.css" rel="stylesheet">
+	<link href="app/css/bootstrap.css" rel="stylesheet">
 </head>
-
-
 <body>
-		<section id="calculator">
+	<section id="calculator">
 		<div class="c-content-box c-size-md c-no-padding c-bg-dark-2">
 			<div class="c-content-feature-4">
 				<div class="c-content-area"></div>
 				<div class="container">
-					<div class="">
-						<div class="">
-							<div class="">
-								<div>
-									<div class="row">
-										<h3>KETO MACROS CALCULATOR</h3>
-									</div>
-									<div>
-										<label class="radioLabel" for="weight"><i class=""></i> Weight</label> <input autocomplete="off" id="weight" name="weight" type="number">
-									</div>
-									<div>
-										<label class="radioLabel" data-target="#bfModal" data-toggle="modal" for="bodyfat"><i class="fa fa-thermometer-3"></i> Body Fat %</label> <input autocomplete="off" id="bodyfat" name="bodyfat" type="number">
-									</div>
-									<div>
-										<label class="radioLabel" for="activelevel"><i class=""></i> Activity Level</label> <input name="activelevel" type="radio" value="Sedentary"> Sedentary <input name="activelevel" type="radio" value="Moderate"> Lightly <input name="activelevel" type="radio" value="Highly"> Highly
-									</div>
-									<div>
-										<label class="radioLabel" for="goalspeed">Goal</label> <input name="lossrate" type="radio" value="Maintain"> Maintain <input name="lossrate" type="radio" value="Slow"> Slow <input name="lossrate" type="radio" value="Medium"> Medium <input name="lossrate" type="radio" value="Fast"> Rapid
-									</div><br>
-									<div>
-										<button class="btn inputs" id='submit' onclick="calculateAll()" type='submit'>Get Your Macros</button> 
-										<button class="btn inputs" id='clearItems' onclick="window.location.reload()" >Clear</button> 
-									</div>
-									<div id="calculatedArea">
-										<div class="calculatedNums mHidden mRows" id="LBMdisplay"></div>
-										<div class="calculatedNums mHidden mRows" id="TDEEdisplay"></div>
-										<div class="calculatedNums mHidden mRows" id="DEFdisplay"></div>
-										<div class="calculatedNums mHidden mRows" id="PMacdisplay"></div>
-										<div class="calculatedNums mHidden mRows" id="FMacdisplay"></div>
-										<div class="calculatedNums mHidden mRows" id="CMacdisplay"></div>
-									</div>
-								</div>
-							</div>
+					<div>
+						<div class="row">
+							<h3>KETO MACROS CALCULATOR</h3>
+						</div>
+						<div>
+							<label class="radioLabel" for="weight"><i class=""></i> Weight</label> <input autocomplete="off" id="weight" name="weight" type="number">
+						</div>
+						<div>
+							<label class="radioLabel" data-target="#bfModal" data-toggle="modal" for="bodyfat"><i class="fa fa-thermometer-3"></i> Body Fat %</label> <input autocomplete="off" id="bodyfat" name="bodyfat" type="number">
+						</div>
+						<div>
+							<label class="radioLabel" for="activelevel"><i class=""></i> Activity Level</label> <input name="activelevel" type="radio" value="Sedentary"> Sedentary <input name="activelevel" type="radio" value="Moderate"> Lightly <input name="activelevel" type="radio" value="Highly"> Highly
+						</div>
+						<div>
+							<label class="radioLabel" for="goalspeed">Goal</label> <input name="lossrate" type="radio" value="Maintain"> Maintain <input name="lossrate" type="radio" value="Slow"> Slow <input name="lossrate" type="radio" value="Medium"> Medium <input name="lossrate" type="radio" value="Fast"> Rapid
+						</div><br>
+						<div>
+							<button class="btn inputs" id='submit' onclick="calculateAll()" type='submit'>Get Your Macros</button> <button class="btn inputs" id='clearItems' onclick="window.location.reload()">Clear</button>
+						</div>
+						<div id="calculatedArea">
+							<div class="calculatedNums mHidden mRows" id="LBMdisplay"></div>
+							<div class="calculatedNums mHidden mRows" id="TDEEdisplay"></div>
+							<div class="calculatedNums mHidden mRows" id="DEFdisplay"></div>
+							<div class="calculatedNums mHidden mRows" id="PMacdisplay"></div>
+							<div class="calculatedNums mHidden mRows" id="FMacdisplay"></div>
+							<div class="calculatedNums mHidden mRows" id="CMacdisplay"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-<script src="app/js/macro.js"></script>
+	<script src="app/js/macro.js">
+	</script>
 </body>
-
-
 </html>
